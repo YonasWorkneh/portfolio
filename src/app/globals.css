@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tenor+Sans&display=swap&family=Dancing+Script:wght@400..700&family=Michroma");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @font-face {
+  font-family: "nautx-regular";
+  src: url("/src/app/assets/fonts/natux-regular/webfonts/ywft-natux-regular-demo.woff")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* Apply it to elements */
+/* body {
+  font-family: "nautx-regular", sans-serif;
+} */
+@layer utilities {
+  .popup::before {
+    clip-path: polygon(100% 0, 0 0, 100% 39%);
+  }
+  .blackcube > div:first-child,
+  .legendx > div:first-child {
+    transition: all 0.3s;
+  }
+  .blackcube:hover > div:first-child {
+    background: radial-gradient(#46454555, #00000097);
+  }
+  .legendx:hover > div:first-child {
+    background: radial-gradient(#7474a994, #15151d);
+  }
+  .gta:hover > div:first-child {
+    background: linear-gradient(#7689d53c, #da5ab438);
+  }
+  .active {
+    transition: all 0.5s ease;
+  }
+  .projects:hover ~ .active {
+    right: 100px !important;
+    width: 120px !important;
+  }
+  .about:hover ~ .active {
+    left: 120px !important;
+    width: 100px !important;
+  }
+  .nav li {
+    margin-bottom: 50px;
+    color: #ffffff47;
+    font-family: "Tenor Sans", serif;
+    letter-spacing: 2px;
+  }
+  .nav li.active {
+    color: #fff;
+  }
+}
+* {
+  font-family: "Inter", serif;
+  cursor: none;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  cursor: none;
+}
+
+/* Hide cursor on touch devices */
+@media (hover: none) {
+  .cursor {
+    display: none;
+  }
+  * {
+    cursor: auto;
+  }
+}
+
+html {
+  scroll-padding-top: 80px;
+}
+/* Style the scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px;
+  background: #111; /* Height of the scrollbar (for horizontal scrollbar) */
+}
+
+/* Style the track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f1f1f105; /* Track color */
+  border-radius: 10px;
+}
+
+/* Style the handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #2d2d2d; /* Handle color */
+  border-radius: 10px;
+}
+
+/* Style the handle when hovered */
+::-webkit-scrollbar-thumb:hover {
+  background: #55555503; /* Darker handle on hover */
+}
