@@ -9,9 +9,10 @@ const boxes = [
   { title: "gebeya", src: "gebeya.png" },
   { title: "hagurash", src: "hagurash.jpeg" },
   { title: "wedding", src: "wedding.png" },
-  { title: "blackcube", src: "black-cube.png" },
-  { title: "legendx", src: "legendx.png" },
-  { title: "gta-vi", src: "gta.png" },
+  { title: "blackcube", src: "blackcube-tab.png" },
+  { title: "legendx", src: "legendx-tab.png" },
+  { title: "gta-vi", src: "gta-tab.png" },
+  { title: "Raja Giri", src: "raja.png" },
 ];
 
 export default function Carousal() {
@@ -99,7 +100,7 @@ export default function Carousal() {
               ease: [0.4, 0, 0.2, 1],
               opacity: { duration: 0.3 },
             }}
-            className={`w-[280px] h-[200px] flex items-center justify-center text-white text-2xl font-bold m-2 mx-4 rounded-lg flex-shrink-0`}
+            className={`w-[280px] h-[250px] flex items-center justify-center text-white text-2xl font-bold m-2 mx-4 rounded-lg flex-shrink-0`}
             style={{ scrollSnapAlign: "start" }}
           >
             <Image
@@ -107,7 +108,7 @@ export default function Carousal() {
               alt={`${title}`}
               width={400}
               height={400}
-              className="border border-white/50 rounded-md w-[280px] h-[180px] transition-transform duration-500 hover:scale-105"
+              className="rounded-md w-[280px] h-[180px] transition-transform duration-500 hover:scale-125"
             />
           </motion.div>
         ))}
