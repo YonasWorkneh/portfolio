@@ -112,7 +112,7 @@ function Hero() {
           </div>
 
           <div className="mt-4 sm:mt-6 md:mt-8 p-4 sm:p-8 md:p-14">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-[100px] tracking-wider font-medium leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-[100px] tracking-wider font-medium leading-tight smPc:text-[70px] xsPc:text-[65px]">
               I design & develop
               <br />
               interactive{" "}
