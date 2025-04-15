@@ -30,7 +30,7 @@ export default function Page() {
   const section10 = useScrollAnimation();
   return (
     <Curve>
-      <main className="xl:max-w-[1440px] lg:max-w-[1080px] lg:pt-28  mx-auto xl:pt-48 bg-[radial-gradient(circle_closest-corner_at_50%_0,#36363625,#0000)] min-h-screen">
+      <main className="2xl:max-w-[1440px] lg:max-w-[1080px] lg:pt-28  mx-auto 2xl:pt-48 bg-[radial-gradient(circle_closest-corner_at_50%_0,#36363625,#0000)] min-h-screen">
         <motion.h1 className="pt-[2px] uppercase text-lg text-[#ffffff6a] before:contents-[''] before:inline-block before:h-[15px] before:w-[15px] before:rounded-full tracking-widest before:bg-[#fff] before:shadow-[0px_0px_10px_#fff] relative before:absolute before:top-[0] before:translate-y-1/2 before:left-0 pl-10">
           About me
         </motion.h1>
