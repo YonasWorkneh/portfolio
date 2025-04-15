@@ -188,7 +188,7 @@ function Hero() {
       </motion.div>
 
       <motion.div
-        className="relative p-2 mb-[150px] sm:p-3 border-t-[1px] h-[700px] sm:h-[750px] lg:h-[750px] 2xl:h-[950px]  border-[1px] border-[#ffffff76] rounded-3xl bg-gradient-to-r from-[#f2f2f21a] via-[#f2f2f211] to-[#f2f2f21a]"
+        className="relative p-2 mb-[150px] sm:p-3 border-t-[1px] h-[700px] sm:h-[750px] lg:h-[850px] 2xl:h-[950px]  border-[1px] border-[#ffffff76] rounded-3xl bg-gradient-to-r from-[#f2f2f21a] via-[#f2f2f211] to-[#f2f2f21a]"
         ref={ref}
         initial="initial"
         animate={isInView ? "enter" : "initial"}
@@ -211,7 +211,7 @@ function Hero() {
               <br className="hidden sm:block" />{" "}
               <span>cutting-edge technologies</span>
             </h2>
-            <div className="mt-[-2rem] sm:mt-6 md:mt-8">
+            <div className="mt-[-2rem] sm:mt-0 md:mt-2 lg:mt-4 2xl:mt-8">
               <TechStack />
             </div>
           </div>

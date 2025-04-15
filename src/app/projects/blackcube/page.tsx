@@ -58,7 +58,7 @@ export default function Page() {
   return (
     <Curve>
       <div className="p-2 sm:p-4 md:p-6 lg:p-8 bg-[radial-gradient(#46454555,#00000097)] min-h-[100vh] relative">
-        <div className="2xl:max-w-[1440px] mx-auto lg:max-w-[1080px]">
+        <div className="2xl:max-w-[1440px] mx-auto lg:max-w-[1000px]">
           <section className="pt-8 sm:pt-12 md:pt-16 min-h-[100vh]" ref={frame}>
             <Header active={active} />
             <Frame>

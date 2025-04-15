@@ -28,7 +28,7 @@ export default function TechStack() {
   };
 
   return (
-    <div className="flex items-center w-full justify-center relative bg-[radial-gradient(circle,rgba(255, 255, 255, 0.794)_0%,rgba(0,0,0,0)_60%)] mt-2 sm:mt-14">
+    <div className="flex items-center w-full justify-center relative bg-[radial-gradient(circle,rgba(255, 255, 255, 0.794)_0%,rgba(0,0,0,0)_60%)] mt-2 sm:mt-5 lg:mt-[1.5rem] 2xl:mt:14">
       {/* main board -- svg */}
       <BoardSvg />
       <motion.div
