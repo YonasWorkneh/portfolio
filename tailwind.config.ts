@@ -62,10 +62,8 @@ export default {
       sm: "640px",
       md: "768px",
       lg: "1024px",
-      xl: "1290px",
-      "2xl": "1536px",
-      smPc: { min: "900px", max: "1080px" },
-      xsPc: { min: "800px", max: "1024px" },
+      xl: "1280px",
+      "2xl": "1300px",
     },
   },
   plugins: [
