@@ -159,7 +159,7 @@ function Hero() {
 
             <div className="mt-[10rem] sm:mt-6 md:mt-[8rem]">
               <p className="text-lg sm:text-xl md:text-2xl text-white text-right">
-                Frontend lead @ Pluto Technologies.
+                Frontend lead @ Pluto Technologies.po
                 <br />
                 <span className="text-base sm:text-lg md:text-xl text-gray-400 text-right">
                   Formerly at Markadank.
