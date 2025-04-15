@@ -83,15 +83,7 @@ export default function ProjectCard({
               <div
                 className="w-full h-[300px] sm:h-full bg-cover bg-no-repeat rounded-xl py-2"
                 style={{ backgroundImage: `url(${imgSrc})` }}
-              >
-                {/* <Image
-                  src={imgSrc ? imgSrc : ""}
-                  alt={title}
-                  height={100}
-                  width={100}
-                  className="h-full w-full object-cover object-center rounded-xl"
-                /> */}
-              </div>
+              ></div>
             )}
           </div>
         </div>

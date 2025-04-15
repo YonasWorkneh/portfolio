@@ -96,7 +96,7 @@ function Hero() {
   return (
     <div className="px-5 sm:px-0">
       <motion.div
-        className="relative p-2 pb-0 border-t-[1px] h-[550px] sm:h-[700px] md:h-[800px] border-l-[1px] border-r-[1px] border-[#ffffff76] rounded-t-3xl bg-gradient-to-r from-[#f2f2f21a] via-[#f2f2f211] to-[#f2f2f21a] mb-28 sm:mb-30 md:mb-40"
+        className="relative p-2 pb-0 border-t-[1px] h-[550px] sm:h-[600px] xl:h-[800px] lg:h-[650px] border-l-[1px] border-r-[1px] border-[#ffffff76] rounded-t-3xl bg-gradient-to-r from-[#f2f2f21a] via-[#f2f2f211] to-[#f2f2f21a] mb-28 sm:mb-30 md:mb-40"
         {...anim(fadeInUp)}
       >
         <div className="relative rounded-t-3xl overflow-hidden bg-gradient-to-b from-[#2C2C2C] to-[#1C1C1C] border-t-[1px] border-l-[1px] border-r-[1px] border-[#ffffff76] h-full">
@@ -188,7 +188,7 @@ function Hero() {
       </motion.div>
 
       <motion.div
-        className="relative p-2 mb-[150px] sm:p-3 border-t-[1px] h-[800px] sm:h-[800px] md:h-[950px] border-[1px] border-[#ffffff76] rounded-3xl bg-gradient-to-r from-[#f2f2f21a] via-[#f2f2f211] to-[#f2f2f21a]"
+        className="relative p-2 mb-[150px] sm:p-3 border-t-[1px] h-[700px] sm:h-[750px] lg:h-[750px] xl:h-[950px]  border-[1px] border-[#ffffff76] rounded-3xl bg-gradient-to-r from-[#f2f2f21a] via-[#f2f2f211] to-[#f2f2f21a]"
         ref={ref}
         initial="initial"
         animate={isInView ? "enter" : "initial"}
@@ -214,7 +214,6 @@ function Hero() {
             <div className="mt-[-2rem] sm:mt-6 md:mt-8">
               <TechStack />
             </div>
-            {/* <NavigationButtons styles="absolute bottom-0 left-1/2 -translate-x-1/2 sm:hidden" /> */}
           </div>
         </div>
       </motion.div>
