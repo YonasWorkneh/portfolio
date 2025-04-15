@@ -58,15 +58,15 @@ export default {
         legendx: "radial-gradient(#15151d1d,#181823c3)",
       },
     },
-    // screens: {
-    //   sm: "640px",
-    //   md: "768px",
-    //   lg: "1024px",
-    //   xl: "1280px",
-    //   "2xl": "1536px",
-    //   smPc: { min: "900px", max: "1080px" },
-    //   xsPc: { min: "800px", max: "1024px" },
-    // },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1290px",
+      "2xl": "1536px",
+      smPc: { min: "900px", max: "1080px" },
+      xsPc: { min: "800px", max: "1024px" },
+    },
   },
   plugins: [
     function ({

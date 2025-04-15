@@ -30,14 +30,14 @@ export default function Page() {
   const section10 = useScrollAnimation();
   return (
     <Curve>
-      <main className="max-w-[1440px] smPc:max-w-[1080px] xsPc:max-w-[1024px] smPc:pt-28 xsPc:pt-24 mx-auto pt-48 bg-[radial-gradient(circle_closest-corner_at_50%_0,#36363625,#0000)] min-h-screen">
+      <main className="xl:max-w-[1440px] lg:max-w-[1080px] lg:pt-28  mx-auto xl:pt-48 bg-[radial-gradient(circle_closest-corner_at_50%_0,#36363625,#0000)] min-h-screen">
         <motion.h1 className="pt-[2px] uppercase text-lg text-[#ffffff6a] before:contents-[''] before:inline-block before:h-[15px] before:w-[15px] before:rounded-full tracking-widest before:bg-[#fff] before:shadow-[0px_0px_10px_#fff] relative before:absolute before:top-[0] before:translate-y-1/2 before:left-0 pl-10">
           About me
         </motion.h1>
         <motion.h2
           ref={section1.ref}
           {...fadeIn(section1.isInView, 1.1)}
-          className="text-3xl sm:text-4xl md:text-6xl lg:text-[65px] tracking-wider font-semibold leading-tight mt-10 bg-[linear-gradient(92.66deg,_#c4c3c3,_#eaeaea_19.79%,_#a2a1a1_33.33%,_#c6c6c6_70.31%,_#606060);] py-3"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-[50px] xl:text-[70px] tracking-wider font-semibold leading-tight mt-10 bg-[linear-gradient(92.66deg,_#c4c3c3,_#eaeaea_19.79%,_#a2a1a1_33.33%,_#c6c6c6_70.31%,_#606060);] py-3"
           style={{
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
