@@ -4,7 +4,7 @@ export default function Loader() {
   return (
     <div className="h-full w-full flex flex-col justify-center items-center">
       <svg
-        className="w-[200px] h-[140px] stroke-[#ffffff8a] stroke-[3px] animate-draw"
+        className="size-[200px] stroke-[#ffffff8a] stroke-[3px] animate-draw"
         style={{
           fillOpacity: 0,
           strokeDasharray: 4500,
