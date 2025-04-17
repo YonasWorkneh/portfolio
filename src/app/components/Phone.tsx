@@ -195,24 +195,19 @@ export default function Phone({ children, className = "" }: PhoneProps) {
             </motion.div>
           ) : (
             <motion.div
-              className="w-full h-full flex flex-col p-3 absolute"
+              className={`w-full h-full flex flex-col p-3 absolute  bg-cover bg-center top-0 left-0 rounded-[2rem] `}
+              style={{ background: "url(/img/phone-bg.jpg)" }}
               style={{
-                backgroundImage: "url('/img/phone-bg.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                top: 0,
-                left: 0,
                 y,
                 opacity,
                 scale,
-                borderRadius: "2rem",
               }}
+              // style={{}}
               drag="y"
               dragConstraints={{ top: 0, bottom: 0 }}
               dragElastic={0.2}
               onDragEnd={handleDragEnd}
               animate={controls}
-              // eslint-disable-next-line react/jsx-no-duplicate-props
             >
               {/* Status Bar */}
               <StatusBar />

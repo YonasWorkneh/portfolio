@@ -28,7 +28,7 @@ export default function Cursor() {
       y: mousePosition.y - 16,
       transition: {
         type: "spring",
-        mass: 0.6,
+        mass: 0.3,
         stiffness: 100,
         damping: 15,
       },
@@ -42,7 +42,7 @@ export default function Cursor() {
       mixBlendMode: "normal" as const,
       transition: {
         type: "spring",
-        mass: 0.6,
+        mass: 0.3,
         stiffness: 100,
         damping: 15,
       },

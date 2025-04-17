@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <Curve>
-      <main className="2xl:max-w-[1440px] lg:max-w-[1000px]   mx-auto xl:pt-48 lg:pt-28 bg-[radial-gradient(circle_closest-corner_at_50%_0,#36363625,#0000)]">
+      <main className="2xl:max-w-[1350px] lg:max-w-[1000px]   pt-48 mx-auto 2xl:pt-48 lg:pt-28 bg-[radial-gradient(circle_closest-corner_at_50%_0,#36363625,#0000)]">
         <Hero />
         <Featured />
       </main>

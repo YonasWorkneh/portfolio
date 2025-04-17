@@ -36,7 +36,7 @@ export default function ProjectCard({
 
   return (
     <motion.div
-      className="relative p-3 border-t-[1px] h-[600px] lg:h-[850px] 2xl:h-[950px] border-[1px] border-[#ffffff76] rounded-3xl bg-[linear-gradient(rgb(30,_29,_29),_rgb(28,_28,_28))] mb-[200px]"
+      className="relative p-3 border-[1px] h-[600px] lg:h-[calc(100dvh-120px)] 2xl:h-[calc(100dvh-120px)]border-[1px] border-[#ffffff76] rounded-3xl bg-[linear-gradient(rgb(30,_29,_29),_rgb(28,_28,_28))] mb-[200px]"
       ref={ref}
       initial="initial"
       animate={isInView ? "enter" : "initial"}

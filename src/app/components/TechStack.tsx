@@ -95,7 +95,7 @@ export default function TechStack() {
         </div>
       </motion.div>
       <div
-        className="flex justify-between absolute w-[320px] sm:w-full gap-8 top-[260px] overflow-x-hidden overflow-y-hidden h-[380px]"
+        className="flex justify-between absolute w-[320px] sm:w-full gap-8 top-[220px] sm:top-[260px] overflow-x-hidden overflow-y-hidden h-[380px]"
         // drag="x"
         // dragConstraints={{ top: 0, left: 0 }}
         // dragElastic={0.2}

@@ -37,7 +37,7 @@ export default function Page() {
         <motion.h2
           ref={section1.ref}
           {...fadeIn(section1.isInView, 1.1)}
-          className="text-3xl sm:text-4xl md:text-6xl lg:text-[50px] xl:text-[70px] tracking-wider font-semibold leading-tight mt-10 bg-[linear-gradient(92.66deg,_#c4c3c3,_#eaeaea_19.79%,_#a2a1a1_33.33%,_#c6c6c6_70.31%,_#606060);] py-3"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-[50px] 2xl:text-[70px] tracking-wider font-semibold leading-tight mt-10 bg-[linear-gradient(92.66deg,_#c4c3c3,_#eaeaea_19.79%,_#a2a1a1_33.33%,_#c6c6c6_70.31%,_#606060);] py-3"
           style={{
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
@@ -110,8 +110,7 @@ export default function Page() {
               decentralized peer-to-peer lending platform powered by the XRP
               Ledger (XRPL), got me and my team this award at the 2024 Gresfet
               hackathon organized by Organization for Southern Cooperation
-              bringing together countries from all across global southern
-              countries.
+              bringing together countries from all across global south.
             </p>
             <Link
               href="https://www.linkedin.com/posts/yonas-workneh_gresfet-inclufi-osc-activity-7270213017693257730-jaK2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEQ-dbIBdOxFXFiW90WPW6qNL_ekKCKolmU"
