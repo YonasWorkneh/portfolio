@@ -37,7 +37,7 @@ export default function RootLayout({
         <div
           className={`bg-[#1C1C1C] text-white  ${
             isLoading
-              ? "m-w-[100vw] min-h-screen flex items-center justify-center"
+              ? "min-h-screen flex items-center justify-center"
               : ""
           } `}
         >
