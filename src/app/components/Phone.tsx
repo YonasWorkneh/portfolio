@@ -39,6 +39,10 @@ export default function Phone({ children, className = "" }: PhoneProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [isFirst, setIsFirst] = useState(true);
   const closeBtn = useRef<HTMLDivElement>(null);
+  const time = currentTime.toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "2-digit",
+  });
 
   // Motion values for swipe animation
   const y = useMotionValue(0);
@@ -214,12 +218,10 @@ export default function Phone({ children, className = "" }: PhoneProps) {
                   })}
                 </p>
                 <h1 className="text-[90px] font-bold text-white mb-2">
-                  {currentTime
-                    .toLocaleTimeString([], {
-                      hour: "numeric",
-                      minute: "2-digit",
-                    })
-                    .slice(0, -2)}
+                  {time.toLowerCase().includes("pm") ||
+                  time.toLowerCase().includes("am")
+                    ? time.slice(0, -2)
+                    : time}
                 </h1>
               </div>
 
