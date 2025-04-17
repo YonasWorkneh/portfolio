@@ -21,6 +21,10 @@ interface NavigatorWithBattery extends Navigator {
 export default function StatusBar({ bgColor }: { bgColor?: string }) {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [batteryLevel, setBatteryLevel] = useState(0);
+  const time = currentTime.toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "2-digit",
+  });
 
   useEffect(() => {
     const updateTime = () => {
@@ -52,12 +56,9 @@ export default function StatusBar({ bgColor }: { bgColor?: string }) {
       }`}
     >
       <div className="flex items-center gap-1">
-        {currentTime
-          .toLocaleTimeString([], {
-            hour: "numeric",
-            minute: "2-digit",
-          })
-          .slice(0, -2)}
+        {time.toLowerCase().includes("pm") || time.toLowerCase().includes("am")
+          ? time.slice(0, -2)
+          : time}
       </div>
       <div className="flex items-center gap-1">
         <Signal className="w-4 h-4 stroke-[2]" />
