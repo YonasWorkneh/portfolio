@@ -22,7 +22,7 @@ export default function RootLayout({
   useEffect(
     function () {
       setIsLoading(true);
-      setTimeout(() => setIsLoading(false), 25000);
+      setTimeout(() => setIsLoading(false), 2500);
     },
     [pathName]
   );
