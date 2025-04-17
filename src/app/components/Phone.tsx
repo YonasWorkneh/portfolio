@@ -195,14 +195,7 @@ export default function Phone({ children, className = "" }: PhoneProps) {
             </motion.div>
           ) : (
             <motion.div
-              className={`w-full h-full flex flex-col p-3 absolute  bg-cover bg-center top-0 left-0 rounded-[2rem] `}
-              style={{ background: "url(/img/phone-bg.jpg)" }}
-              style={{
-                y,
-                opacity,
-                scale,
-              }}
-              // style={{}}
+              className={`w-full h-full flex flex-col p-3 absolute  bg-cover bg-center top-0 left-0 rounded-[2rem] ${y} ${opacity} ${scale}`}
               drag="y"
               dragConstraints={{ top: 0, bottom: 0 }}
               dragElastic={0.2}
