@@ -118,9 +118,9 @@ export default function Projects() {
           </header>
           <div className="relative p-3 border-t-[0px] h-[100px] mx-[200px] border-[1px] border-[#ffffff76] rounded-b-3xl bg-gradient-to-r from-[#f2f2f21a] via-[#f2f2f211] to-[#f2f2f21a] mb-5">
             <Link href={"#"} className="group">
-              <div className="relative rounded-b-3xl overflow-hidden flex items-center justify-center  bg-gradient-to-b from-[#2C2C2C] to-[#1C1C1C] group-hover:!bg-[radial-gradient(#ffbd5916,#ffbd5a1b,#00000077)] border-[1px]  border-[#ffffff76] border-t-0 h-full p-14 pt-0 pb-1 transition-all">
+              <div className="relative rounded-b-3xl overflow-hidden flex items-center justify-center  bg-gradient-to-b from-[#2C2C2C] to-[#1C1C1C] group-hover:!bg-[radial-gradient(#ffbd5916,#ffbd5a1b,#00000077)] border-[1px]  border-[#ffffff76] border-t-0 h-full p-14 lg:px-[2rem] pt-0 pb-1 transition-all">
                 <div
-                  className="h-[100px] mx-10 w-full "
+                  className="h-[100px] mx-10 w-full lg:mx-0"
                   style={{
                     background: "url('/img/gta-b.png')",
                     backgroundSize: "cover",
