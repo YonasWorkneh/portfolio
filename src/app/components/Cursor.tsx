@@ -14,6 +14,14 @@ export default function Cursor() {
         y: e.clientY,
       });
     };
+    // const mouseOver = (e: MouseEvent) => {
+    //   const target = e.target as HTMLElement;
+    //   if (target.closest("button, a, [role='button'], [tabindex]")) {
+    //     setCursorVariant("hover");
+    //   } else {
+    //     setCursorVariant("default");
+    //   }
+    // };
 
     window.addEventListener("mousemove", mouseMove);
 

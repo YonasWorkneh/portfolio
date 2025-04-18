@@ -141,7 +141,7 @@ export default function Phone({ children, className = "" }: PhoneProps) {
 
   return (
     <div
-      className={`relative mx-auto border-[12px] border-[#1e1d1d] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl ring-2 ring-white/10 ${className} [clip-path:inset(-1px_-1px_-1px_-1px)]`}
+      className={`relative mx-auto border-[12px] border-[#1e1d1d] rounded-[2.5rem] h-[calc(100dvh-100px)] w-[300px] shadow-xl ring-2 ring-white/10 ${className} [clip-path:inset(-1px_-1px_-1px_-1px)]`}
     >
       {/* Camera and sensors */}
       <div
