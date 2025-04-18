@@ -63,7 +63,7 @@ export default function Featured() {
           <Projects />
         </ProjectCard>
       </div>
-      <div className="sm:hidden w-full px-5 sm:px-0 h-[750px] mb-[150px]">
+      <div className="sm:hidden w-full px-5 sm:px-0 h-[calc(100dvh - 100px)] mb-[150px]">
         <Phone className="w-full h-full">
           {isProjectsOpen ? (
             <>
