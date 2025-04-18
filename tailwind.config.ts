@@ -26,6 +26,12 @@ export default {
           }, // white
           "100%": { transform: "translateY(0px)", color: "#fff" }, // black
         },
+        bounceLeft: {
+          "0%": {
+            opacity: "0",
+          }, // white
+          "100%": { opacity: "1" }, // black
+        },
         draw: {
           "0%": {
             strokeDashoffset: "4500",
@@ -39,6 +45,7 @@ export default {
         bounceColor: "bounceColor 1s infinite",
         draw: "draw 10s ease",
         infiniteDraw: "draw 10s ease infinite",
+        bounceLeft: "bounceLeft 1s infinite",
       },
       boxShadow: {
         white: "0 -5px 10px #fff",

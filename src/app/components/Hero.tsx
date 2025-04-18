@@ -96,20 +96,6 @@ function Hero() {
     setDelayed(false);
   }, []);
 
-  // useEffect(() => {
-  //   setMargin("-450px 0px");
-  //   const handleResize = () => {
-  //     if (window.innerWidth < 500) {
-  //       setMargin("-100px 0px");
-  //     } else {
-  //       setMargin("-450px 0px");
-  //     }
-  //   };
-
-  //   handleResize(); // set initially
-  //   window.addEventListener("resize", handleResize);
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
   return (
     <div className="px-5 sm:px-0">
       <motion.div

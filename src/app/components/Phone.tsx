@@ -7,7 +7,7 @@ import {
   PanInfo,
 } from "framer-motion";
 import StatusBar from "./StatusBar";
-import { ArrowLeft } from "lucide-react";
+import { ArrowUpLeft } from "lucide-react";
 
 interface PhoneProps {
   children: ReactNode;
@@ -55,6 +55,7 @@ export default function Phone({
   const opacity = useTransform(y, [0, 200], [1, 0]);
   const scale = useTransform(y, [0, 200], [1, 0.8]);
   const controls = useAnimation();
+  const [showIndicator, setShowIndicator] = useState(true);
 
   const handleGreetingComplete = useCallback(() => {
     controls
@@ -161,12 +162,17 @@ export default function Phone({
       {/* Open Control */}
       <div
         className="absolute -right-1 top-[100px] w-1 h-16 bg-[#1e1d1d] rounded-r-lg ring-1 ring-white/10 group hover:w-2 active:scale-95 transition-all duration-200 cursor-pointer"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {
+          setIsOpen(!isOpen);
+          setShowIndicator(false);
+        }}
         ref={closeBtn}
       >
-        <span className="bg-white p-4 absolute top-0 -left-4 translate-y-1/2">
-          <ArrowLeft className="" />
-        </span>
+        {showIndicator && (
+          <span className="absolute -bottom-[28px] -left-2 animate-bounceLeft transition-transform z-50 rotate-[23deg]">
+            <ArrowUpLeft size={30} />
+          </span>
+        )}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0.5 h-6 bg-[#2d2d2d] rounded-r-lg group-hover:opacity-0 transition-opacity duration-200"></div>
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0.5 h-6 bg-gradient-to-b from-[#4a4a4a] to-[#2d2d2d] rounded-r-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
       </div>
