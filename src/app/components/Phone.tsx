@@ -12,6 +12,7 @@ import { ArrowLeft } from "lucide-react";
 interface PhoneProps {
   children: ReactNode;
   className?: string;
+  onClosePhone?: () => void;
 }
 
 const greetings = [
@@ -32,7 +33,11 @@ const greetings = [
   "שלום",
 ];
 
-export default function Phone({ children, className = "" }: PhoneProps) {
+export default function Phone({
+  children,
+  className = "",
+  onClosePhone,
+}: PhoneProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentGreeting, setCurrentGreeting] = useState(0);
   const [showContent, setShowContent] = useState(false);
@@ -85,6 +90,7 @@ export default function Phone({ children, className = "" }: PhoneProps) {
 
   useEffect(() => {
     const handleClose = async () => {
+      onClosePhone?.();
       setShowContent(false);
       await controls.start({ y: 2000, opacity: 1, scale: 1 });
       closeBtn.current?.style.setProperty("width", "4px");
@@ -94,7 +100,7 @@ export default function Phone({ children, className = "" }: PhoneProps) {
     } else {
       closeBtn.current?.style.setProperty("width", "8px");
     }
-  }, [isOpen, controls]);
+  }, [isOpen, controls, onClosePhone]);
 
   // Update time and date
   useEffect(() => {
@@ -141,7 +147,7 @@ export default function Phone({ children, className = "" }: PhoneProps) {
 
   return (
     <div
-      className={`relative mx-auto border-[12px] border-[#1e1d1d] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl ring-2 ring-white/10 ${className} [clip-path:inset(-1px_-1px_-1px_-1px)]`}
+      className={`relative mx-auto border-[12px] border-[#1e1d1d] rounded-[2.5rem] shadow-xl ring-2 ring-white/10 ${className} [clip-path:inset(-1px_-1px_-1px_-1px)]`}
     >
       {/* Camera and sensors */}
       <div

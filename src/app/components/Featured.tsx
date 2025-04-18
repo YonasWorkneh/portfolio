@@ -64,7 +64,10 @@ export default function Featured() {
         </ProjectCard>
       </div>
       <div className="sm:hidden w-full px-5 sm:px-0 h-[calc(100dvh-100px)] mb-[150px]">
-        <Phone className="w-full h-full">
+        <Phone
+          className="w-full h-full"
+          onClosePhone={() => setIsProjectsOpen(false)}
+        >
           {isProjectsOpen ? (
             <>
               {isProjectsLoading ? (
