@@ -4,8 +4,6 @@ import TechStack from "./TechStack";
 import { motion, useInView } from "framer-motion";
 import anim from "../utils/anim";
 import { useEffect, useRef, useState } from "react";
-// import { MarginType } from "react";
-// import NavigationButtons from "./NavigationButtons";
 
 function Hero() {
   const fadeInUp = {
@@ -31,11 +29,10 @@ function Hero() {
     enter: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0 } },
   };
   const ref = useRef(null); // to trigger the animation as I get to the element
-  const [margin, setMargin] = useState<string | undefined>("-450px 0px");
 
   const isInView = useInView(ref, {
     once: true,
-    margin: margin ? margin : "0px 0px",
+    margin: "-100px 0px",
   }); // Ensures it triggers once when the element is visible
   const rotatingWords = ["websites.", "interfaces.", "applications."];
   const [wordIndex, setWordIndex] = useState(0);
@@ -99,19 +96,20 @@ function Hero() {
     setDelayed(false);
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 500) {
-        setMargin("-100px 0px");
-      } else {
-        setMargin("-450px 0px");
-      }
-    };
+  // useEffect(() => {
+  //   setMargin("-450px 0px");
+  //   const handleResize = () => {
+  //     if (window.innerWidth < 500) {
+  //       setMargin("-100px 0px");
+  //     } else {
+  //       setMargin("-450px 0px");
+  //     }
+  //   };
 
-    handleResize(); // set initially
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   handleResize(); // set initially
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
   return (
     <div className="px-5 sm:px-0">
       <motion.div
