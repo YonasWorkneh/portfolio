@@ -7,6 +7,7 @@ import {
   PanInfo,
 } from "framer-motion";
 import StatusBar from "./StatusBar";
+import { ArrowLeft } from "lucide-react";
 
 interface PhoneProps {
   children: ReactNode;
@@ -157,6 +158,9 @@ export default function Phone({ children, className = "" }: PhoneProps) {
         onClick={() => setIsOpen(!isOpen)}
         ref={closeBtn}
       >
+        <span className="bg-white p-4 absolute top-0 -left-4 translate-y-1/2">
+          <ArrowLeft className="" />
+        </span>
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0.5 h-6 bg-[#2d2d2d] rounded-r-lg group-hover:opacity-0 transition-opacity duration-200"></div>
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0.5 h-6 bg-gradient-to-b from-[#4a4a4a] to-[#2d2d2d] rounded-r-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
       </div>
