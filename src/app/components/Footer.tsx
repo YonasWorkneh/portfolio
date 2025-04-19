@@ -45,7 +45,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full border-t border-[#ffffff27]">
-      <div className="2xl:max-w-[1440px] lg:max-w-[1000px] mx-auto py-10 sm:py-20 px-8 sm:px-0 ">
+      <div className="2xl:max-w-[1350px] lg:max-w-[1000px] mx-auto py-10 sm:py-20 px-8 sm:px-0 ">
         <div>
           <div className="flex items-center gap-10 justify-center sm:justify-start flex-col sm:flex-row">
             <motion.svg

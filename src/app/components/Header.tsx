@@ -215,7 +215,7 @@ export default function Header() {
                 <motion.a
                   variants={itemVariants}
                   custom={0}
-                  href="#"
+                  href="https://www.linkedin.com/in/yonas-workneh/"
                   className="flex items-center justify-between py-3 text-lg font-michroma tracking-wider hover:text-gray-300 transition-colors"
                 >
                   LinkedIn
