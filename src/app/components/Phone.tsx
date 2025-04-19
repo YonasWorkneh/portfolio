@@ -258,7 +258,7 @@ export default function Phone({
 
               {/* Bottom swipe section */}
               <motion.div
-                className="w-full h-20 flex items-center justify-center -mb-[30px]"
+                className="w-full h-20 flex items-center justify-center -mb-[43px]"
                 drag="y"
                 dragConstraints={{ top: 0, bottom: 0 }}
                 dragElastic={0.2}

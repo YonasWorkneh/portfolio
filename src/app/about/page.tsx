@@ -19,7 +19,6 @@ export default function Page() {
   });
 
   const section1 = useScrollAnimation();
-  const section2 = useScrollAnimation();
   const section3 = useScrollAnimation();
   const section4 = useScrollAnimation();
   const section5 = useScrollAnimation();

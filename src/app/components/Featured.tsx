@@ -86,7 +86,9 @@ export default function Featured() {
                   </div>
                 </div>
               ) : (
-                <ProjectsApp />
+                <ProjectsApp
+                  onCloseProjectApp={() => setIsProjectsOpen(false)}
+                />
               )}
             </>
           ) : (
