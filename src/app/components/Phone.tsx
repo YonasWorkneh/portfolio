@@ -16,7 +16,6 @@ interface PhoneProps {
 }
 
 const greetings = [
-  "ሰላም",
   "Hello",
   "Hola",
   "Привет",
@@ -31,6 +30,7 @@ const greetings = [
   "สวัสดี",
   "Γεια σας",
   "שלום",
+  "ሰላም",
 ];
 
 export default function Phone({
@@ -84,7 +84,7 @@ export default function Phone({
           }
           return prev + 1;
         });
-      }, 160);
+      }, 150);
     }
     return () => clearInterval(interval);
   }, [isOpen, isFirst, controls, handleGreetingComplete]);
