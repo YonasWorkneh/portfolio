@@ -30,8 +30,8 @@ export default function Page() {
   const section10 = useScrollAnimation();
   return (
     <Curve>
-      <main className="px-10 lg:px-0 lg:max-w-[1000px] 2xl:max-w-[1350px] mx-auto pt-32 lg:pt-36 2xl:pt-48 bg-[radial-gradient(circle_closest-corner_at_50%_0,#36363625,#0000)]">
-        <motion.h1 className="pt-[2px] uppercase text-sm lg:text-base 2xl:text-lg text-[#ffffff6a] before:contents-[''] before:inline-block before:h-[15px] before:w-[15px] before:rounded-full tracking-widest before:bg-[#fff] before:shadow-[0px_0px_10px_#fff] relative before:absolute before:top-[0] before:translate-y-1/2 before:left-0 pl-10">
+      <main className="px-4 sph:px-10 lg:px-0 lg:max-w-[1000px] 2xl:max-w-[1350px] mx-auto pt-32 lg:pt-36 2xl:pt-48 bg-[radial-gradient(circle_closest-corner_at_50%_0,#36363625,#0000)]">
+        <motion.h1 className="pt-[2px] uppercase text-sm lg:text-base 2xl:text-lg text-[#ffffff6a] before:contents-[''] before:inline-block before:size-[10px] lg:before:size-[15px] before:rounded-full tracking-widest before:bg-[#fff] before:shadow-[0px_0px_10px_#fff] relative before:absolute before:top-[0] before:translate-y-1/2 before:left-0 pl-5 lg:pl-10">
           About me
         </motion.h1>
         <motion.h2
@@ -61,7 +61,7 @@ export default function Page() {
             ref={section2.ref}
             {...fadeIn(section2.isInView, 1.3)}
           >
-            <p className="lg:text-[22px] 2xl:text-2xl">
+            <p className="text-[15px] lg:text-[22px] 2xl:text-2xl">
               This is me &mdash; alongside some flicks from recent moments,
               captured with heart and a hint of story.
             </p>
@@ -81,7 +81,7 @@ export default function Page() {
               <h3 className="lg:text-[18px] 2xl:text-xl font-semibold">
                 My background in Software development
               </h3>
-              <p className="mt-5 text-[#ffffffae] lg:text-[14px] 2xl:text-[20px]">
+              <p className="mt-5 text-[#ffffffae] text-[14px] 2xl:text-[20px]">
                 I started coding during the COVID lockdown, just looking for
                 something to do. What began as an escape from boredom quickly
                 turned into a passion before I even knew it. Each line of code
@@ -108,7 +108,7 @@ export default function Page() {
             <h3 className="lg:text-[18px] 2xl:text-xl font-semibold">
               Building Beyond Limits
             </h3>
-            <p className="mt-5 text-[#ffffffae] mb-10 lg:text-[14px] 2xl:text-[20px]">
+            <p className="mt-5 text-[#ffffffae] mb-10 text-[14px] 2xl:text-[20px]">
               Hackathons have been more than competitions — Each challenge
               sharpened my skills, fueled my passion, and reminded me why I love
               building solutions that matter. <br /> <br /> Inclufi, a
@@ -141,7 +141,7 @@ export default function Page() {
             <h3 className="lg:text-[18px] 2xl:text-xl font-semibold">
               Hobbies & Interests
             </h3>
-            <p className="mt-5 text-[#ffffffae] mb-10 2xl:text-[20px] lg:text-[14px]">
+            <p className="mt-5 text-[#ffffffae] mb-10 2xl:text-[20px] text-[14px]">
               When I&apos;m not coding, you&apos;ll often find me exploring new
               places, diving into a good book, or sharpening my skills over a
               game of competitive chess—a passion that&apos;s been close to my
@@ -168,7 +168,7 @@ export default function Page() {
                 (Ethiopian University Students Sports Festival)
               </span>
             </h3>
-            <p className="mt-5 text-[#ffffffae] mb-10 2xl:text-[20px] lg:text-[14px]">
+            <p className="mt-5 text-[#ffffffae] mb-10 2xl:text-[20px] text-[14px]">
               Back in 2024, I had the honor of captaining my university chess
               team in the finals — a proud and defining moment in my journey
               both as a player and a leader. That same year, I also received
