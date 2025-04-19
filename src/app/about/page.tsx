@@ -49,8 +49,8 @@ export default function Page() {
         </motion.h2>
         <div className="block lg:grid lg:grid-cols-2 my-10 lg:my-28">
           <motion.div
-            ref={section2.ref}
-            {...fadeIn(section2.isInView, 1.2)}
+            // ref={section1.ref}
+            {...fadeIn(section1.isInView, 1.2)}
             className="h-[450px] w-[350px] lg:h-[600px] lg:w-[400px] 2xl:h-[800px] 2xl:w-[600px]"
           >
             <PhotoFrame img="db.jpg" />
@@ -58,8 +58,8 @@ export default function Page() {
           <motion.div
             {...fadeIn}
             className="mt-16"
-            ref={section2.ref}
-            {...fadeIn(section2.isInView, 1.3)}
+            // ref={section2.ref}
+            {...fadeIn(section1.isInView, 1.3)}
           >
             <p className="text-[15px] lg:text-[22px] 2xl:text-2xl">
               This is me &mdash; alongside some flicks from recent moments,
