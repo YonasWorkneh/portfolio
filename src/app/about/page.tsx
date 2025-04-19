@@ -135,7 +135,7 @@ export default function Page() {
           <motion.div
             ref={section7.ref}
             {...fadeIn(section7.isInView, 0.5)}
-            className="-mt-16 w-[600px]"
+            className="-mt-16 w-[350px] lg:w-[400px] 2xl:w-[600px]"
             style={{ gridColumn: "1/3" }}
           >
             <h3 className="lg:text-[18px] 2xl:text-xl font-semibold">
@@ -178,7 +178,7 @@ export default function Page() {
             <motion.div
               ref={section10.ref}
               {...fadeIn(section10.isInView, 0.9)}
-              className="mt-20 lg:w-[350px] 2xl:h-[550px]"
+              className="mt-20 lg:h-[350px] 2xl:h-[550px]"
             >
               <PhotoFrame img="chess.png" />
             </motion.div>
