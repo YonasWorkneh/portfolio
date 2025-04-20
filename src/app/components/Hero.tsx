@@ -191,7 +191,7 @@ function Hero() {
       </motion.div>
 
       <motion.div
-        className="relative p-2 mb-[150px] sm:p-3 border-t-[1px] h-[750px] sm:h-[750px] lg:h-[850px] 2xl:h-[calc(100dvh-120px)]  border-[1px] border-[#ffffff76] rounded-3xl bg-gradient-to-r from-[#f2f2f21a] via-[#f2f2f211] to-[#f2f2f21a]"
+        className="relative p-2 mb-[150px] sm:p-3 border-t-[1px] h-[750px] sm:h-[850px] 2xl:h-[950px]  border-[1px] border-[#ffffff76] rounded-3xl bg-gradient-to-r from-[#f2f2f21a] via-[#f2f2f211] to-[#f2f2f21a]"
         ref={ref}
         initial="initial"
         animate={isInView ? "enter" : "initial"}
