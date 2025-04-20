@@ -7,6 +7,7 @@ import {
 } from "framer-motion";
 import StatusBar from "./StatusBar";
 import { useEffect } from "react";
+import { Phone } from "lucide-react";
 
 function ProjectsApp({
   onCloseProjectApp,
@@ -21,6 +22,116 @@ function ProjectsApp({
   const opacity = useTransform(y, [0, 200], [1, 0]);
   const scale = useTransform(y, [0, 200], [1, 0.8]);
   const controls = useAnimation();
+
+  const filterVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.1, type: "spring", stiffness: 120 },
+    }),
+  };
+
+  const sideImageVariant = {
+    hidden: (dir: "left" | "right") => ({
+      x: dir === "left" ? -100 : 100,
+      opacity: 0,
+      rotate: dir === "left" ? -5 : 5,
+    }),
+    visible: {
+      x: 0,
+      opacity: 1,
+      rotate: 0,
+      transition: { type: "spring", stiffness: 80 },
+    },
+  };
+
+  const centerImageVariant = {
+    hidden: { scale: 0.9, opacity: 0 },
+    visible: {
+      scale: 1.2,
+      opacity: 1,
+      transition: { delay: 0.2, duration: 0.5, type: "spring" },
+    },
+  };
+  const filters = [
+    {
+      label: "All",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="#ffffffa6"
+          className="size-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 0 0-1.883 2.542l.857 6a2.25 2.25 0 0 0 2.227 1.932H19.05a2.25 2.25 0 0 0 2.227-1.932l.857-6a2.25 2.25 0 0 0-1.883-2.542m-16.5 0V6A2.25 2.25 0 0 1 6 3.75h3.879a1.5 1.5 0 0 1 1.06.44l2.122 2.12a1.5 1.5 0 0 0 1.06.44H18A2.25 2.25 0 0 1 20.25 9v.776"
+          />
+        </svg>
+      ),
+    },
+    {
+      label: "Recents",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="#ffffffa6"
+          className="size-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
+      ),
+    },
+    {
+      label: "Fullstack",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="#ffffffa6"
+          className="size-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3"
+          />
+        </svg>
+      ),
+    },
+    {
+      label: "Mobile",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="#ffffffa6"
+          className="size-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+          />
+        </svg>
+      ),
+    },
+  ];
 
   const handleDragEnd = async (
     _event: MouseEvent | TouchEvent | PointerEvent,
@@ -55,47 +166,80 @@ function ProjectsApp({
           ) : (
             <>
               <h1 className="text-xl">Projects</h1>
+
+              {/* Top Image Section */}
               <div className="flex justify-center items-center mt-10 relative">
-                <div
-                  className="w-[150px] h-[200px] rounded-tl-lg rounded-bl-lg"
+                {[
+                  { src: "/img/hagurash.jpeg", dir: "left" },
+                  { src: "/img/wedding.png", dir: "left" },
+                ].map((img, i) => (
+                  <motion.div
+                    key={i}
+                    custom={img.dir}
+                    variants={sideImageVariant}
+                    initial="hidden"
+                    animate="visible"
+                    className={`w-[150px] h-[200px] ${
+                      i === 1 ? "-ml-2" : ""
+                    } rounded-tl-lg rounded-bl-lg`}
+                    style={{
+                      background: `url(${img.src})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                ))}
+                <motion.div
+                  variants={centerImageVariant}
+                  initial="hidden"
+                  animate="visible"
+                  className="w-[650px] h-[200px] rounded-lg relative z-30 scale-110"
                   style={{
-                    background: "url(/img/hagurash.jpeg)",
+                    background: "url(/img/black-cube.png)",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
+                    scale: 1.1,
                   }}
-                ></div>
-                <div
-                  className="b w-[150px] h-[200px] rounded-tl-lg rounded-bl-lg -ml-2"
-                  style={{
-                    background: "url(/img/wedding.png)",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                ></div>
-                <div
-                  className="w-[650px] h-[200px] scale-125 rounded-lg relative z-30"
-                  style={{
-                    background: `url(/img/black-cube.png)`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                ></div>
-                <div
-                  className="w-[150px] h-[200px] rounded-tr-lg rounded-br-lg relative"
-                  style={{
-                    background: "url(/img/gta.png)",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                ></div>
-                <div
-                  className="w-[150px] h-[200px] rounded-tr-lg rounded-br-lg -ml-2"
-                  style={{
-                    background: "url(/img/legendx.png)",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                ></div>
+                />
+                {[
+                  { src: "/img/gta.png", dir: "right" },
+                  { src: "/img/legendx.png", dir: "right" },
+                ].map((img, i) => (
+                  <motion.div
+                    key={i}
+                    custom={img.dir}
+                    variants={sideImageVariant}
+                    initial="hidden"
+                    animate="visible"
+                    className={`w-[150px] h-[200px] ${
+                      i === 1 ? "-ml-2" : ""
+                    } rounded-tr-lg rounded-br-lg`}
+                    style={{
+                      background: `url(${img.src})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                ))}
+              </div>
+
+              {/* Filters */}
+              <div className="flex gap-3 mt-10 justify-between">
+                {filters.map((filter, i) => (
+                  <motion.button
+                    key={filter.label}
+                    custom={i}
+                    initial="hidden"
+                    animate="visible"
+                    variants={filterVariants}
+                    className="flex flex-col items-center gap-2"
+                  >
+                    <span className="bg-[#000] size-10 rounded-full border border-[#edebeb32] flex items-center justify-center">
+                      {filter.icon}
+                    </span>
+                    <span className="text-xs">{filter.label}</span>
+                  </motion.button>
+                ))}
               </div>
             </>
           )}
