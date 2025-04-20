@@ -2,12 +2,14 @@ import {
   motion,
   PanInfo,
   useAnimation,
+  useInView,
   useMotionValue,
   useTransform,
 } from "framer-motion";
 import StatusBar from "./StatusBar";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Phone } from "lucide-react";
+import Image from "next/image";
 
 function ProjectsApp({
   onCloseProjectApp,
@@ -241,6 +243,14 @@ function ProjectsApp({
                   </motion.button>
                 ))}
               </div>
+              {/* projects */}
+              <div className="my-10">
+                <ProjectCard
+                  imageUrl="/img/pjapp/bcube.png"
+                  label="Black cube"
+                />
+                <ProjectCard imageUrl="/img/pjapp/raja.png" label="Raja Giri" />
+              </div>
             </>
           )}
         </div>
@@ -332,6 +342,27 @@ function LandingPage({ onExplore }: { onExplore: () => void }) {
         Explore
       </button>
     </div>
+  );
+}
+
+function ProjectCard({ imageUrl, label }: { imageUrl: string; label: string }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="mb-10"
+    >
+      <div
+        className="w-full h-[200px] bg-cover bg-center bg-no-repeat rounded-md py-2 border border-[#ffffff1a]"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      ></div>
+      <p className="mt-1 text-white/70">{label}</p>
+    </motion.div>
   );
 }
 
