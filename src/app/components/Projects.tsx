@@ -68,7 +68,13 @@ export default function Projects() {
               <input
                 type="text"
                 value={url}
-                onChange={(e) => setUrl(e.target.value)}
+                onChange={(e) => {
+                  setUrl(e.target.value);
+                  console.log(url);
+                  if (e.target.value === "yonasw.dev") {
+                    setHideTabContent(false);
+                  }
+                }}
                 className="w-full h-full bg-transparent text-[#8E8E8E] absolute top-0 left-0 z-10 rounded-3xl px-10 focus:outline-none"
               />
             </div>

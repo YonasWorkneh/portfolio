@@ -9,6 +9,7 @@ import ProjectsApp from "./ProjectsApp";
 export default function Featured() {
   const [isProjectsOpen, setIsProjectsOpen] = useState(false);
   const [isProjectsLoading, setIsProjectsLoading] = useState(true);
+  const [isFirst, setIsFirst] = useState(true);
   return (
     <>
       <div className="hidden sm:block px-5 sm:px-0">
@@ -88,6 +89,8 @@ export default function Featured() {
               ) : (
                 <ProjectsApp
                   onCloseProjectApp={() => setIsProjectsOpen(false)}
+                  isFirst={isFirst}
+                  onSetIsFirst={setIsFirst}
                 />
               )}
             </>

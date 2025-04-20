@@ -57,6 +57,7 @@ export default function Phone({
   const controls = useAnimation();
   const [showIndicator, setShowIndicator] = useState(true);
 
+
   const handleGreetingComplete = useCallback(() => {
     controls
       .start({
