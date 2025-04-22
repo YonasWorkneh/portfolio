@@ -9,7 +9,7 @@ export default function Banner() {
       <div className="relative w-full max-w-[800px]">
         <motion.div {...anim(fadeInUp(1.5, 0.8))}>
           <Image
-            src={"/img/blackcube/home.png"}
+            src={"/img/pjapp/legendx.png"}
             alt="home"
             className="border border-white/10 rounded-lg w-full"
             width={800}

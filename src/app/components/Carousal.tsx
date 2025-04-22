@@ -5,13 +5,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const boxes = [
+  { title: "hagurash", src: "hagurash.jpeg" },
+  { title: "legendx", src: "legendx-tab.png" },
+  { title: "Epicure", src: "epicure.png" },
+  { title: "blackcube", src: "blackcube-tab.png" },
+  { title: "gta-vi", src: "gta-tab.png" },
   { title: "kandake", src: "kandake.png" },
   { title: "gebeya", src: "gebeya.png" },
-  { title: "hagurash", src: "hagurash.jpeg" },
   { title: "wedding", src: "wedding.png" },
-  { title: "blackcube", src: "blackcube-tab.png" },
-  { title: "legendx", src: "legendx-tab.png" },
-  { title: "gta-vi", src: "gta-tab.png" },
   { title: "Raja Giri", src: "raja.png" },
 ];
 

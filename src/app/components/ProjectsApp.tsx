@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import {
   motion,
   PanInfo,
@@ -7,9 +8,6 @@ import {
   useTransform,
 } from "framer-motion";
 import StatusBar from "./StatusBar";
-import { useEffect, useRef } from "react";
-import { Phone } from "lucide-react";
-import Image from "next/image";
 
 function ProjectsApp({
   onCloseProjectApp,
@@ -250,6 +248,12 @@ function ProjectsApp({
                   label="Black cube"
                 />
                 <ProjectCard imageUrl="/img/pjapp/raja.png" label="Raja Giri" />
+                <ProjectCard
+                  imageUrl="/img/pjapp/legendx.png"
+                  label="LegendX"
+                />
+                <ProjectCard imageUrl="/img/pjapp/gta.png" label="GTA VI" />
+                <ProjectCard imageUrl="/img/epicure.png" label="Epicure" />
               </div>
             </>
           )}
