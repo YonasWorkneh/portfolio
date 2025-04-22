@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import {
   motion,
   PanInfo,
@@ -22,7 +22,57 @@ function ProjectsApp({
   const opacity = useTransform(y, [0, 200], [1, 0]);
   const scale = useTransform(y, [0, 200], [1, 0.8]);
   const controls = useAnimation();
-
+  const projects = [
+    {
+      title: "Black Cube",
+      imgSrc: "/img/pjapp/bcube.png",
+      type: "all",
+    },
+    {
+      title: "Raja Giri",
+      imgSrc: "/img/pjapp/raja.png",
+      type: "all",
+    },
+    {
+      title: "GTA VI",
+      imgSrc: "/img/pjapp/gta.png",
+      type: "all recents",
+    },
+    {
+      title: "Epicure",
+      imgSrc: "/img/epicure.png",
+      type: "all mobile fullstack",
+    },
+    {
+      title: "Hagurash",
+      imgSrc: "/img/hagurash.jpeg",
+      type: "all fullstack",
+    },
+    {
+      title: "LegendX",
+      imgSrc: "/img/pjapp/legendx.png",
+      type: "all fullstack",
+    },
+    {
+      title: "B&D Wedding",
+      imgSrc: "/img/wedding.png",
+      type: "all",
+    },
+    {
+      title: "Gebeya",
+      imgSrc: "/img/gebeya.png",
+      type: "all fullstack",
+    },
+    {
+      title: " Kandake",
+      imgSrc: "/img/Kandake.png",
+      type: "all",
+    },
+  ];
+  const [filterKey, setFilterKey] = useState("all");
+  const projectsFiltered = projects.filter((project) =>
+    project.type.includes(filterKey)
+  );
   const filterVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
@@ -224,7 +274,7 @@ function ProjectsApp({
               </div>
 
               {/* Filters */}
-              <div className="flex gap-3 mt-10 justify-between">
+              <div className="flex gap-3 mt-10 justify-between px-2">
                 {filters.map((filter, i) => (
                   <motion.button
                     key={filter.label}
@@ -233,27 +283,38 @@ function ProjectsApp({
                     animate="visible"
                     variants={filterVariants}
                     className="flex flex-col items-center gap-2"
+                    onClick={() => setFilterKey(filter.label.toLowerCase())}
                   >
-                    <span className="bg-[#000] size-10 rounded-full border border-[#edebeb32] flex items-center justify-center">
+                    <span
+                      className={`bg-[#000]  size-10 rounded-full border border-[#edebeb1b] ${
+                        filter.label.toLowerCase() === filterKey
+                          ? "shadow-[0px_0px_10px_#ffffff1f] border-[#edebeb4e]"
+                          : ""
+                      } flex items-center justify-center`}
+                    >
                       {filter.icon}
                     </span>
-                    <span className="text-xs">{filter.label}</span>
+                    <span
+                      className={`text-xs ${
+                        filter.label.toLowerCase() === filterKey
+                          ? "text-[#ffffff]"
+                          : "text-[#ffffff67]"
+                      }`}
+                    >
+                      {filter.label}
+                    </span>
                   </motion.button>
                 ))}
               </div>
               {/* projects */}
               <div className="my-10">
-                <ProjectCard
-                  imageUrl="/img/pjapp/bcube.png"
-                  label="Black cube"
-                />
-                <ProjectCard imageUrl="/img/pjapp/raja.png" label="Raja Giri" />
-                <ProjectCard
-                  imageUrl="/img/pjapp/legendx.png"
-                  label="LegendX"
-                />
-                <ProjectCard imageUrl="/img/pjapp/gta.png" label="GTA VI" />
-                <ProjectCard imageUrl="/img/epicure.png" label="Epicure" />
+                {projectsFiltered.map((project, i) => (
+                  <ProjectCard
+                    key={i}
+                    imageUrl={project.imgSrc}
+                    label={project.title}
+                  />
+                ))}
               </div>
             </>
           )}
