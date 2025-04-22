@@ -31,7 +31,7 @@ function ProjectsApp({
     {
       title: "Raja Giri",
       imgSrc: "/img/pjapp/raja.png",
-      type: "all",
+      type: "all recents",
     },
     {
       title: "GTA VI",
@@ -51,7 +51,7 @@ function ProjectsApp({
     {
       title: "LegendX",
       imgSrc: "/img/pjapp/legendx.png",
-      type: "all fullstack",
+      type: "all fullstack recents",
     },
     {
       title: "B&D Wedding",
