@@ -307,7 +307,7 @@ function ProjectsApp({
                 ))}
               </div>
               {/* projects */}
-              <div className="my-10">
+              <div className="mt-10 mb-32">
                 {projectsFiltered.map((project, i) => (
                   <ProjectCard
                     key={i}

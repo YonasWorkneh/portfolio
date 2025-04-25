@@ -43,8 +43,8 @@ export default function Solution() {
               KEY DISCOVERY
             </h2>
             <p className="text-white text-[14px] sm:text-xl md:text-2xl font-medium leading-tight md:leading-10 font-tenor">
-              Bringing a product like LegendX to life at this pace requires
-              tight collaboration, indvidual—speed alone wasn’t enough.
+              It was not just about establishing a commanding digital presence,
+              but also creating a modern and simplistic design.
             </p>
           </div>
         </motion.div>
@@ -78,7 +78,7 @@ export default function Solution() {
               className="text-[20px] md:text-[25px] mb-6 md:mb-0"
               style={{ textShadow: "0px 0px 10px #ffffff39" }}
             >
-              Collabration &mdash; clear communication is everything
+              Interaction &mdash; simplicity is everything
             </p>
           </motion.div>
           <motion.div
@@ -93,18 +93,21 @@ export default function Solution() {
             }}
           >
             <p className="text-white/50 font-tenor">
-              While the primary objective was to build LegendX efficiently, I
-              quickly recognized the critical role of teamwork and
-              collaboration. Many projects in this space fail to deliver at
-              speed, but our team’s seamless communication and shared vision
-              were essential in overcoming this challenge. <br /> <br />{" "}
-              Effective collaboration was key—not just in completing tasks, but
-              in blending different perspectives and expertise. It’s not enough
-              to have individual skills; success comes from harmonizing efforts
-              to create something greater than the sum of its parts. The goal
-              wasn’t only to build a product quickly, but to craft a platform
-              that was the result of true teamwork, where every contribution
-              shaped a cohesive, high-performing solution.
+              While the primary objective was to establish a secure digital
+              presence as quickly as possible, I couldn’t help but notice a
+              significant gap in existing websites within this field. Many lack
+              engaging user interaction and, more importantly, an elegant design
+              that captivates visitors—one that invites exploration rather than
+              mere functionality. <br /> <br /> However, elegance alone is not
+              enough. A truly effective website must strike a delicate balance:
+              it should impress and inspire curiosity without overshadowing its
+              primary purpose. For black cube, that meant ensuring the focus
+              remained on its credibility, expertise, and services, rather than
+              just aesthetics. The goal was not simply to create a visually
+              stunning website but to craft a digital presence that seamlessly
+              blends beauty with purpose—a platform that enhances marketing
+              efforts while maintaining clarity, professionalism, and ease of
+              access for clients.
             </p>
           </motion.div>
         </motion.div>

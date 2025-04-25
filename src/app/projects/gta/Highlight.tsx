@@ -12,13 +12,15 @@ export default function Highlight() {
   const img1InView = useInView(img1, { once: true, margin: "-150px 0px" });
   const img2InView = useInView(img2, { once: true, margin: "-150px 0px" });
   const img3InView = useInView(img3, { once: true, margin: "-150px 0px" });
+  const vid1InView = useInView(img1, { margin: "-150px 0px" });
+  const vid2InView = useInView(img2, { margin: "-150px 0px" });
 
   useEffect(
     function () {
-      if (img1InView && home.current) home.current.play();
-      if (img2InView && serviceRef.current) serviceRef.current.play();
+      if (vid1InView && home.current) home.current.play();
+      if (vid2InView && serviceRef.current) serviceRef.current.play();
     },
-    [img1InView, img2InView]
+    [vid1InView, vid2InView]
   );
 
   return (
@@ -39,14 +41,11 @@ export default function Highlight() {
           variants={scaleUp()}
           className="w-full"
         >
-          <Image
-            src={"/img/legendx.png"}
-            alt="home-page"
-            width={1000}
-            height={300}
-            className={`border border-white/10 rounded-xl w-full mt-20 ${
-              img3InView ? "opacity-90" : "opacity-70"
-            }`}
+          <video
+            src="/video/home.mov"
+            muted
+            ref={home}
+            className="border border-white/10 rounded-xl w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] mb-28 mt-20 object-cover"
           />
         </motion.div>
 
@@ -56,14 +55,11 @@ export default function Highlight() {
           animate={img2InView ? "enter" : "initial"}
           variants={scaleUp()}
         >
-          <Image
-            src={"/img/equipments.png"}
-            alt="home-page"
-            width={1000}
-            height={300}
-            className={`border border-white/10 rounded-xl w-full mt-20 ${
-              img3InView ? "opacity-90" : "opacity-70"
-            }`}
+          <video
+            src="/video/cur.mov"
+            muted
+            ref={serviceRef}
+            className="border border-white/10 rounded-xl w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] mb-28 mt-20 object-cover"
           />
         </motion.div>
         <motion.div
@@ -73,7 +69,7 @@ export default function Highlight() {
           variants={scaleUp()}
         >
           <Image
-            src={"/img/users.png"}
+            src={"/img/blackcube/ethics.png"}
             alt="home-page"
             width={1000}
             height={300}
