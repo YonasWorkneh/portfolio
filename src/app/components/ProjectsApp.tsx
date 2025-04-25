@@ -65,7 +65,7 @@ function ProjectsApp({
     },
     {
       title: " Kandake",
-      imgSrc: "/img/Kandake.png",
+      imgSrc: "/img/kandake.png",
       type: "all",
     },
   ];
