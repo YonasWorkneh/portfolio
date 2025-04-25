@@ -41,11 +41,14 @@ export default function Highlight() {
           variants={scaleUp()}
           className="w-full"
         >
-          <video
-            src="/video/home.mov"
-            muted
-            ref={home}
-            className="border border-white/10 rounded-xl w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] mb-28 mt-20 object-cover"
+          <Image
+            src={"/img/hero-scrolled.png"}
+            alt="home-page"
+            width={1000}
+            height={300}
+            className={`border border-white/10 rounded-xl w-full mt-20 ${
+              img1InView ? "opacity-90" : "opacity-70"
+            }`}
           />
         </motion.div>
 
@@ -55,11 +58,14 @@ export default function Highlight() {
           animate={img2InView ? "enter" : "initial"}
           variants={scaleUp()}
         >
-          <video
-            src="/video/cur.mov"
-            muted
-            ref={serviceRef}
-            className="border border-white/10 rounded-xl w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] mb-28 mt-20 object-cover"
+          <Image
+            src={"/img/blackcube/ethics.png"}
+            alt="home-page"
+            width={1000}
+            height={300}
+            className={`border border-white/10 rounded-xl w-full mt-20 ${
+              img3InView ? "opacity-90" : "opacity-70"
+            }`}
           />
         </motion.div>
         <motion.div
