@@ -120,7 +120,8 @@ export default function Header() {
               <ArrowUpRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4" />
             </Link>
             <Link
-              href="#"
+              href="https://drive.google.com/file/d/1RbbZbp_Dsj_mwyQkldWDleM0WrmSXULt/view?usp=sharing"
+              target="_blank"
               className="flex items-center gap-1 hover:text-gray-300 transition-colors text-[10px] sm:text-xs font-michroma tracking-[2px]"
             >
               Resume
@@ -216,6 +217,7 @@ export default function Header() {
                   variants={itemVariants}
                   custom={0}
                   href="https://www.linkedin.com/in/yonas-workneh/"
+                  target="_blank"
                   className="flex items-center justify-between py-3 text-lg font-michroma tracking-wider hover:text-gray-300 transition-colors"
                 >
                   LinkedIn
@@ -225,7 +227,8 @@ export default function Header() {
                 <motion.a
                   variants={itemVariants}
                   custom={1}
-                  href="#"
+                  href="https://drive.google.com/file/d/1RbbZbp_Dsj_mwyQkldWDleM0WrmSXULt/view?usp=sharing"
+                  target="_blank"
                   className="flex items-center justify-between py-3 text-lg font-michroma tracking-wider hover:text-gray-300 transition-colors"
                 >
                   Resume
