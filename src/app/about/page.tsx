@@ -153,7 +153,7 @@ export default function Page() {
             className="w-[350px] lg:-mt-16"
           >
             <div className="mt-20 w-[350px] h-[450px] lg:w-[400px] lg:h-[600px] 2xl:w-[600px] 2xl:h-[880px]">
-              <PhotoFrame img="chess.jpg" />
+              <PhotoFrame img="chess.JPG" />
             </div>
           </motion.div>
           <motion.div
