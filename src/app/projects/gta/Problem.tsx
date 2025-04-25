@@ -41,7 +41,7 @@ export default function Problem() {
         className="text-[20px] mt-10 sm:text-[40px]"
         style={{ textShadow: "0px 0px 10px #ffffff64" }}
       >
-        Giving black cube secure digital pressence where it was most needed.
+        Givin black cube secure digital pressence where it was most needed.
       </motion.p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 sm:mt-20">
         <p
