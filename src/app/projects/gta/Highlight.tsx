@@ -49,7 +49,7 @@ export default function Highlight() {
           variants={scaleUp()}
         >
           <Image
-            src={"/img/blackcube/poster.png"}
+            src={"/img/poster.png"}
             alt="home-page"
             width={1000}
             height={300}
@@ -65,7 +65,7 @@ export default function Highlight() {
           variants={scaleUp()}
         >
           <Image
-            src={"/img/blackcube/scrolled.png"}
+            src={"/img/scrolled.png"}
             alt="home-page"
             width={1000}
             height={300}
@@ -81,7 +81,7 @@ export default function Highlight() {
           variants={scaleUp()}
         >
           <Image
-            src={"/img/blackcube/footer.png"}
+            src={"/img/footer.png"}
             alt="home-page"
             width={1000}
             height={300}
