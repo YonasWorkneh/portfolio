@@ -7,21 +7,11 @@ export default function Highlight() {
   const img1 = useRef(null);
   const img2 = useRef(null);
   const img3 = useRef(null);
-  const home = useRef<HTMLVideoElement>(null);
-  const serviceRef = useRef<HTMLVideoElement>(null);
+  const img4 = useRef(null);
   const img1InView = useInView(img1, { once: true, margin: "-150px 0px" });
   const img2InView = useInView(img2, { once: true, margin: "-150px 0px" });
   const img3InView = useInView(img3, { once: true, margin: "-150px 0px" });
-  const vid1InView = useInView(img1, { margin: "-150px 0px" });
-  const vid2InView = useInView(img2, { margin: "-150px 0px" });
-
-  useEffect(
-    function () {
-      if (vid1InView && home.current) home.current.play();
-      if (vid2InView && serviceRef.current) serviceRef.current.play();
-    },
-    [vid1InView, vid2InView]
-  );
+  const img4InView = useInView(img4, { once: true, margin: "-150px 0px" });
 
   return (
     <div>
@@ -59,7 +49,7 @@ export default function Highlight() {
           variants={scaleUp()}
         >
           <Image
-            src={"/img/blackcube/ethics.png"}
+            src={"/img/blackcube/poster.png"}
             alt="home-page"
             width={1000}
             height={300}
@@ -75,7 +65,23 @@ export default function Highlight() {
           variants={scaleUp()}
         >
           <Image
-            src={"/img/blackcube/ethics.png"}
+            src={"/img/blackcube/scrolled.png"}
+            alt="home-page"
+            width={1000}
+            height={300}
+            className={`border border-white/10 rounded-xl w-full mt-20 ${
+              img3InView ? "opacity-90" : "opacity-70"
+            }`}
+          />
+        </motion.div>
+        <motion.div
+          ref={img4}
+          initial="initial"
+          animate={img4InView ? "enter" : "initial"}
+          variants={scaleUp()}
+        >
+          <Image
+            src={"/img/blackcube/footer.png"}
             alt="home-page"
             width={1000}
             height={300}
